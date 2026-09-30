@@ -1,0 +1,8 @@
+COMO ADICIONAR SUA FOTO OFICIAL AO SITE:
+=========================================
+
+1. Escolha uma foto profissional do Dr. Marcio (idealmente com boa iluminação, jaleco ou terno/camisa social).
+2. Salve o arquivo de imagem nesta pasta (d:/temp/Site - DrMarcio/images/) com o nome exato:
+   dr-marcio.jpg
+3. O site já está programado para carregar sua foto automaticamente no topo da página e ajustar o enquadramento.
+4. Caso a foto esteja em formato PNG, pode renomear para dr-marcio.jpg ou alterar a extensão no index.html.
