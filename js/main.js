@@ -63,9 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
           value: 1
         });
 
-        // Conversão direta no Google Ads
+        // Conversão direta no Google Ads (Ação: Clique no WhatsApp)
         window.gtag('event', 'conversion', {
-          send_to: 'AW-663683174',
+          send_to: 'AW-663683174/1olnCPz4oqcdEOaAvLwC',
           value: 1.0,
           currency: 'BRL',
           event_callback: function() {
