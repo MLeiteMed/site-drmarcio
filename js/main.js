@@ -46,25 +46,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 3. Rastreamento e Otimização de Cliques no WhatsApp (DataLayer / Analytics Ready)
-  const whatsappLinks = document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]');
-  whatsappLinks.forEach((link, index) => {
+  // 3. Rastreamento e Otimização de Cliques no WhatsApp e Telefone (Google Ads & Analytics)
+  const contactLinks = document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"], a[href^="tel:"]');
+  contactLinks.forEach((link, index) => {
     link.addEventListener('click', (e) => {
       const ctaLocation = link.getAttribute('data-cta') || `cta-pos-${index}`;
+      const isWhatsApp = link.href.includes('wa.me') || link.href.includes('whatsapp.com');
+      const eventName = isWhatsApp ? 'whatsapp_click' : 'phone_call_click';
       
-      // Se o Google Analytics (gtag) estiver presente na página
+      // Disparo de Conversão para o Google Ads (gtag)
       if (typeof window.gtag === 'function') {
+        // Evento padrão de lead
         window.gtag('event', 'generate_lead', {
-          event_category: 'WhatsApp',
+          event_category: isWhatsApp ? 'WhatsApp' : 'Phone',
           event_label: ctaLocation,
           value: 1
+        });
+
+        // Conversão direta no Google Ads
+        window.gtag('event', 'conversion', {
+          send_to: 'AW-663683174',
+          value: 1.0,
+          currency: 'BRL',
+          event_callback: function() {
+            // Callback opcional após envio
+          }
         });
       }
 
       // Se o Google Tag Manager (dataLayer) estiver ativo
       if (window.dataLayer && Array.isArray(window.dataLayer)) {
         window.dataLayer.push({
-          event: 'whatsapp_conversion',
+          event: eventName,
           cta_location: ctaLocation
         });
       }
