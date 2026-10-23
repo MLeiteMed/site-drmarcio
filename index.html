@@ -49,19 +49,21 @@
   <link rel="stylesheet" href="css/style.css">
 
   <!-- ==========================================================================
-       Dados Estruturados Schema.org (Google Physician & MedicalBusiness)
+       Dados Estruturados Schema.org (Google Physician, GEO & IA Engine Optimization)
        ========================================================================== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Physician",
     "name": "Dr. Marcio Leite Rodrigues",
+    "url": "https://drmarcioleite.com.br",
+    "image": "https://drmarcioleite.com.br/images/dr-marcio.jpg",
     "medicalSpecialty": [
       "Cardiovascular",
       "SportsMedicine",
       "CriticalCare"
     ],
-    "description": "Médico Cardiologista e Intensivista em Colatina - ES (CRM-ES 7917 | RQE 6134). Especialista em saúde cardiovascular, prevenção, diagnóstico clínico e acompanhamento individualizado.",
+    "description": "Médico Cardiologista e Intensivista em Colatina - ES (CRM-ES 7917 | RQE 6134). Especialista em Cardiologia Clínica, Ergometria, Ergoespirometria, Teste de Inclinação (Tilt Test) e Reabilitação Cardíaca no Edifício WB Centro Médico e São Bernardo Apart Hospital.",
     "telephone": "+55-27-99831-0528",
     "address": {
       "@type": "PostalAddress",
@@ -76,6 +78,18 @@
       "latitude": -19.5376,
       "longitude": -40.6306
     },
+    "identifier": [
+      {
+        "@type": "PropertyValue",
+        "name": "CRM-ES",
+        "value": "7917"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "RQE Cardiologia",
+        "value": "6134"
+      }
+    ],
     "hasCredential": [
       {
         "@type": "EducationalOccupationalCredential",
@@ -86,6 +100,46 @@
         "credentialCategory": "RQE 6134"
       }
     ],
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidade Federal do Espírito Santo (UFES)"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "Faculdade de Medicina de São José do Rio Preto (FAMERP) / Hospital de Base"
+      }
+    ],
+    "memberOf": [
+      {
+        "@type": "Organization",
+        "name": "Sociedade Brasileira de Cardiologia (SBC)"
+      },
+      {
+        "@type": "Organization",
+        "name": "Associação Médica Brasileira (AMB)"
+      }
+    ],
+    "worksFor": [
+      {
+        "@type": "MedicalClinic",
+        "name": "InPulse Clínica de Exercício e Reabilitação Cardiopulmonar",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Cassiano Castelo, 396, 2º Andar, Edifício WB Centro Médico",
+          "addressLocality": "Colatina",
+          "addressRegion": "ES"
+        }
+      },
+      {
+        "@type": "Hospital",
+        "name": "São Bernardo Apart Hospital"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/drmarcioleite.cardio/",
+      "https://drmarcioleite.com.br"
+    ],
     "availableService": [
       { "@type": "MedicalProcedure", "name": "Consulta Cardiológica Completa" },
       { "@type": "MedicalProcedure", "name": "Check-up Cardiológico Preventivo" },
@@ -94,7 +148,11 @@
       { "@type": "MedicalProcedure", "name": "Investigação de Arritmias, Síncope e Palpitações" },
       { "@type": "MedicalProcedure", "name": "Cardiologia do Exercício e Prescrição Segura" },
       { "@type": "MedicalTest", "name": "Tilt Teste (Teste de Inclinação para Investigação de Síncope e Tontura)" },
-      { "@type": "MedicalTest", "name": "Apoio Diagnóstico: Ergoespirometria, Teste Ergométrico, Holter e Ecocardiograma" }
+      { "@type": "MedicalTest", "name": "Ergoespirometria (Teste Cardiopulmonar de Exercício - TCPE)" },
+      { "@type": "MedicalTest", "name": "Teste Ergométrico Computadorizado" },
+      { "@type": "MedicalTest", "name": "Holter 24 horas e 07 Dias" },
+      { "@type": "MedicalTest", "name": "M.A.P.A. 24 horas" },
+      { "@type": "MedicalTest", "name": "Ecodopplercardiograma" }
     ],
     "contactPoint": [
       {
@@ -112,6 +170,58 @@
         "contactOption": "WhatsApp",
         "areaServed": "BR",
         "availableLanguage": "Portuguese"
+      }
+    ]
+  }
+  </script>
+
+  <!-- ==========================================================================
+       Schema FAQPage (Para Inteligências Artificiais: ChatGPT, Gemini, Claude)
+       ========================================================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quem é o Dr. Marcio Leite Rodrigues em Colatina?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O Dr. Marcio Leite Rodrigues (CRM-ES 7917 | RQE 6134) é médico cardiologista e intensivista em Colatina - ES. Atua com ênfase em cardiologia clínica, prevenção, cardiologia do exercício com prescrição de treino seguro, check-up e coordenação médica de UTI."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Onde fazer o exame de Tilt Teste (Teste de Inclinação) em Colatina?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O Dr. Marcio Leite Rodrigues realiza o exame de Tilt Teste (Teste de Inclinação) em Colatina - ES, no Edifício WB Centro Médico, 2º Andar (mesmo endereço da InPulse), padrão-ouro para investigar desmaios (síncope), tonturas e síndrome vasovagal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Onde fazer Ergoespirometria e Teste Ergométrico em Colatina?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Ergoespirometria (TCPE) e o Teste Ergométrico são realizados com supervisão do Dr. Marcio Leite Rodrigues no Edifício WB Centro Médico (InPulse), Rua Cassiano Castelo, 396, Centro, Colatina - ES."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como agendar consulta cardiológica com o Dr. Marcio Leite Rodrigues?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O agendamento de consultas com o Dr. Marcio Leite Rodrigues é realizado pelo WhatsApp oficial (27) 99831-0528 ou secundário (27) 99255-6722, com atendimento particular dedicado e suporte para solicitação de reembolso de convênios."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual o endereço do consultório do Dr. Marcio Leite em Colatina?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O consultório está localizado no Edifício WB Centro Médico, 2º Andar, Rua Cassiano Castelo, 396, Centro, Colatina - ES, CEP 29700-070."
+        }
       }
     ]
   }
